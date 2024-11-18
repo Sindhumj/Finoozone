@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Finozone Financial Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Check if the user is authenticated when the page loads
+        window.onload = function () {
+            if (localStorage.getItem('isAuthenticated') !== 'true') {
+                window.location.href = 'index.html';
+            }
+        }
+
+
+        // Logout function to clear localStorage and redirect to the login page
+        function handleLogout() {
+            localStorage.removeItem('isAuthenticated');
+            localStorage.removeItem('username');
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="finozone-logo-black.png" alt="Finozone Logo" />
+            </div>
+            <div class="header-right">
+                <a href="https://finozone.com" class="contact-link">Visit our Website</a>
+                <a href="mailto:contact@finozone.com" class="contact-link">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Welcome Section -->
+    <section class="heading-content">
+        <h1>Welcome to Finozone Investment Services Private Limited</h1>
+        <p>You've successfully logged in as <strong id="usernameDisplay"></strong>!</p>
+    </section>
+    
+    <!--content section-->
+    <Section class=""
+    <!-- Add Logout Button at the Bottom -->
+    <div style="text-align: center; margin-top: 50px;">
+        <button onclick="handleLogout()" style="padding: 10px 20px; background-color: red; color: white; border: none; cursor: pointer;">
+            Logout
+        </button>
+    </div>
+
+    <script>
+        // Display the username from localStorage
+        document.getElementById('usernameDisplay').innerText = localStorage.getItem('username');
+    </script>
+</body>
+</html>

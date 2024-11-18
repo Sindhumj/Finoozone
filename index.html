@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finozone Financial Services IMF Private Limited</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function handleLogin(event) {
+            event.preventDefault(); 
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'finozone' && password === '12345') {
+                localStorage.setItem('isAuthenticated', 'true');
+                localStorage.setItem('username', username);
+                window.location.href = 'nextpage.html';
+            } else {
+                alert('Invalid username or password!');
+            }
+        }
+
+        window.onload = function () {
+            if (localStorage.getItem('isAuthenticated') === 'true') {
+                window.location.href = 'nextpage.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="finozone-logo-black.png" alt="Finozone Logo" />
+            </div>
+            <div class="header-right">
+                <a href="https://finozone.com" class="contact-link">Visit our Website</a>
+                <a href="mailto:contact@finozone.com" class="contact-link">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <div id="main">
+        <!-- Heading Content -->
+        <section class="heading-content">
+            <h1>Client Support Services</h1>
+            <p>Our mission is to unlock your journey toward financial freedom by providing 360'</p>
+            <p>services with simple tools and suitable insights</p>
+        </section>
+
+        <div class="content-container">
+            <!-- Agenda Section -->
+            <div class="agenda-section">
+                <h4>Agenda</h4>
+                <ul>
+                    <li>KYC</li>
+                    <li>Onboard</li>
+                    <li>mandate</li>
+                    <li>Purchase</li>
+                    <li>Switches</li>
+                    <li>Redemptions</li>
+                    <li>SIP</li>
+                    <li>STP</li>
+                    <li>SWP</li>
+                    <li>folio details Changes</li>
+                    <li>Mutual Fund Pledge</li>
+                    <li>NFO List</li>
+                    <li>Bank List enable for Mandates</li>
+                </ul>
+            </div>
+
+            <!-- Login Section -->
+            <div class="login-container">
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <h2>Login</h2>
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" id="loginButton">Submit</button>
+                </form>
+            </div>
+
+            <!-- Partner Section -->
+            <div class="partner-section">
+                <h4>Cut-off Timings for NAV Applicability </h4>
+                <ul>
+                    <li>Liquid and Overnight schemes: 1.30 PM</li>
+                    <li>All schemes other than Liquid and Overnight schemes : 3.00 PM</li>
+                    <li>Redemption (including Liquid and Overnight schemes) : 3.00 PM</li>
+                    <li>Switches (including Liquid and Overnight schemes) : 3.00 PM	</li>
+                </ul>
+                <div Class="nse-login">
+                    <h3>NSE Login:<a href="https://www.nsenmf.com/Login/MFDErrorPage.aspx?SHBB%2bFAd5ENJrKuk5TNsT2n6n3O4IFQdJX9MsnfITMX4OnsgVv3gVEQFRL5TK1ozOsmWrYrhcyttAZ30STR8d2S24%2bURK6KAaU6ef0wguwBs3VpRYMSJG57SNRDvkZ7N"> Click Here</a>
+                    </h3>
+                </div>
+                <div class="kfintech-login">
+                    <h3>KFINTCH Login :<a href="https://mfs.kfintech.com/mfs/distributor/Distributor_Login.aspx">Click Here</a></h3>
+
+                </div>
+                <div Class="cams-login">
+                    <h3> CAMS Login :<a href="https://www.camsonline.com/Distributors/Service-Requests/Distributor-Mailback-Services/Request-Mailback/WBR77">Click Here</a></h3>
+
+                </div>
+                <div class="Stock-market">
+                    <h3>NIFTY50 Login:<a href="EgZjaHJvbWUqDwgAEEUYOxiDARixAxiABDIPCAAQRRg7GIMBGLEDGIAEMgYIARBFGDkyDQgCEAAYgwEYsQMYgAQyBggDEEUYQDINCAQQABiDARixAxiABDIGCAUQRRg8MgYIBhBFGD0yBggHEEUYPNIBCTE2ODE4ajBqN6gCCLACAQ">Click here</a></h3>
+
+                </div>
+                <div class="kyc">
+                    <h3>KYC Status :<a href="https://camskra.com/">Click Here</a></h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-links">
+            <h4>Download App</h4>
+            <a href="https://apps.apple.com/in/app/innvest/id1645871610">iPhone (link)</a> | <a href="https://play.google.com/store/apps/details?id=com.iw.innvest">Android (link)</a>
+        </div>
+    </div>
+</body>
+</html>
