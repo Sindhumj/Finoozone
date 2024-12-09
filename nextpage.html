@@ -13,13 +13,13 @@
             }
         }
 
-
         // Logout function to clear localStorage and redirect to the login page
         function handleLogout() {
             localStorage.removeItem('isAuthenticated');
             localStorage.removeItem('username');
             window.location.href = 'index.html';
         }
+        
     </script>
 </head>
 <body>
@@ -40,6 +40,71 @@
         <h1>Welcome to Finozone Investment Services Private Limited</h1>
         <p>You've successfully logged in as <strong id="usernameDisplay"></strong>!</p>
     </section>
+
+     <!-- KYC Section -->
+     <title>Collapsible Example</title>
+     <style>
+       .collapsible {
+         cursor: pointer;
+         padding: 10px;
+         border: 1px solid #ccc;
+         background-color: #f1f1f1;
+         font-weight: bold;
+         text-align: center;
+       }
+   
+       .content {
+         display: block; /* Initially visible */
+         padding: 10px;
+         border-left: 1px solid #ccc;
+         border-right: 1px solid #ccc;
+         border-bottom: 1px solid #ccc;
+         background-color: #f9f9f9;
+         overflow: hidden;
+         transition: max-height 0.3s ease-out;
+         max-height: 0; /* Hidden by default */
+       }
+   
+       .content.open {
+         max-height: 100px; /* Adjust the max height if needed */
+         display: block;
+       }
+     </style>
+   </head>
+   <body>
+   
+   <h2 class="collapsible">Click to toggle subtitles</h2>
+   <div class="content">
+     <ul>
+       <li>Subtitle 1</li>
+       <li>Subtitle 2</li>
+       <li>Subtitle 3</li>
+     </ul>
+   </div>
+   
+   <script>
+     // Select the collapsible element and the content element
+     const collapsible = document.querySelector('.collapsible');
+     const content = document.querySelector('.content');
+   
+     // Add a click event listener to toggle the content's visibility
+     collapsible.addEventListener('click', () => {
+       content.classList.toggle('open'); // Toggle the 'open' class
+     });
+   </script>
+
+            <h10><a href="https://drive.google.com/file/d/1hazXGONgJVO2q4X3hF7RIqpmUHszsqFb/view?usp=sharing">1.Physical KYC Form</a></h10>
+           
+            </div>
+
+            <div class="online-kyc Modification">
+                <h10><a href="https://www.dspim.com/invest/#goto=kyc">2.online KYC link</a></h10>
+               
+                </div>
+                
+                
+
+
     
     <!--content section-->
     <Section class=""
@@ -49,10 +114,14 @@
             Logout
         </button>
     </div>
-
+    
     <script>
         // Display the username from localStorage
         document.getElementById('usernameDisplay').innerText = localStorage.getItem('username');
     </script>
 </body>
 </html>
+
+
+
+
