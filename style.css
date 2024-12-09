@@ -228,3 +228,24 @@ button[type="submit"]:hover {
     margin-top: 10px;
     font-size: 13px;
 }
+.kyc-forms{
+    margin-top: 10px;
+    margin-inline-start: 35px;
+    color: darkgreen;
+}
+.physical-kyc{
+    margin-inline-start: 35px;
+    margin-top: 10px;
+    color: black;
+    
+}
+.online-kyc{
+    margin-inline-start: 35px;
+    margin-top: 10px;
+    color: black;
+}
+
+.finozone{
+    margin-top: 10px;
+    font-size: 13px;
+}
