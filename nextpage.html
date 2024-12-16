@@ -41,73 +41,82 @@
         <p>You've successfully logged in as <strong id="usernameDisplay"></strong>!</p>
     </section>
 
-     <!-- KYC Section -->
-     <title>Collapsible Example</title>
-     <style>
-       .collapsible {
-         cursor: pointer;
-         padding: 10px;
-         border: 1px solid #ccc;
-         background-color: #f1f1f1;
-         font-weight: bold;
-         text-align: center;
-       }
-   
-       .content {
-         display: block; /* Initially visible */
-         padding: 10px;
-         border-left: 1px solid #ccc;
-         border-right: 1px solid #ccc;
-         border-bottom: 1px solid #ccc;
-         background-color: #f9f9f9;
-         overflow: hidden;
-         transition: max-height 0.3s ease-out;
-         max-height: 0; /* Hidden by default */
-       }
-   
-       .content.open {
-         max-height: 100px; /* Adjust the max height if needed */
-         display: block;
-       }
-     </style>
-   </head>
-   <body>
-   
-   <h2 class="collapsible">Click to toggle subtitles</h2>
-   <div class="content">
-     <ul>
-       <li>Subtitle 1</li>
-       <li>Subtitle 2</li>
-       <li>Subtitle 3</li>
-     </ul>
-   </div>
-   
-   <script>
-     // Select the collapsible element and the content element
-     const collapsible = document.querySelector('.collapsible');
-     const content = document.querySelector('.content');
-   
-     // Add a click event listener to toggle the content's visibility
-     collapsible.addEventListener('click', () => {
-       content.classList.toggle('open'); // Toggle the 'open' class
-     });
-   </script>
+    <!-- KYC Section (Collapsible) -->
+    <section>
+      <h3 class="collapsible">KYC Forms & Online links</h3>
+      <div class="content">
+          <ul>
+              <li class="physical-kyc"><a href="https://drive.google.com/file/d/1hazXGONgJVO2q4X3hF7RIqpmUHszsqFb/view?usp=sharing">1. Individual From</a></li>
+              <li class="online-kyc"><a href="https://drive.google.com/file/d/1IkRu04j9g8anSTSALoD6vwF8Twu2tJjo/view?usp=sharing">2. Non-Individual Form</a></li>
+              <li class="online-kyc"><a href="https://www.dspim.com/invest/#goto=kyc">3. Online link for modification</a></li>
+              <li class="online-kyc"><a href="https://partners.sbimf.com/partner-login">4. New KYC Link (SBI)</a></li>
+              <li class="online-kyc"><a href="https://partners.sbimf">5. KYC Rules</a></li>          
+          </ul>
+      </div>
+  </section>
 
-            <h10><a href="https://drive.google.com/file/d/1hazXGONgJVO2q4X3hF7RIqpmUHszsqFb/view?usp=sharing">1.Physical KYC Form</a></h10>
-           
-            </div>
-
-            <div class="online-kyc Modification">
-                <h10><a href="https://www.dspim.com/invest/#goto=kyc">2.online KYC link</a></h10>
-               
-                </div>
-                
-                
-
-
+         
+  
     
-    <!--content section-->
-    <Section class=""
+  <!--on Bord (forms)-->
+  <section>
+    <h3 class="collapsible">On Board Forms</h3>
+    <div class="content">
+        <ul>
+            <li class="physical-kyc"><a href="**********************">1. RI Client From</a></li>
+            <li class="online-kyc"><a href="****************">2. NRI Client Form</a></li>
+            <li class="online-kyc"><a href="****************">3. Health Insurance form </a></li>
+            <li class="online-kyc"><a href="*******************">3. Term Insurance form </a></li>
+            <li class="online-kyc"><a href="*******************************">4. on Board process</a></li>        
+        </ul>
+    </div>
+</section>
+
+<!--RI TO NRI Convertion -->
+<section>
+    <h3 class="collapsible">RI To NRI Convertion</h3>
+    <div class="content">
+        <ul>
+            <li class="physical-kyc"><a href="************">1.Froms</a></li>
+            <li class="online-kyc"><a href="**************">2. Dacuments Deatils</a></li>
+           </ul>
+    </div>
+</section>
+
+<!--Mandate -->
+<section>
+    <h3 class="collapsible">Mandate</h3>
+    <div class="content">
+        <ul>
+            <li class="physical-kyc"><a href="**********">1.Mandate Rules</a></li>
+            <li class="online-kyc"><a href="*********">2.Banklist Enable for Mandates</a></li>
+           </ul>
+    </div>
+</section>
+
+<!--Whitelist Funds of the year -->
+<section>
+    <h3 class="collapsible">Whitelist Funds of the Year</h3>
+    <div class="content">
+        <ul>
+            <li class="physical-kyc"><a href="**********">1.Whitelist Funds</a></li>
+            <li class="online-kyc"><a href="*********">2.Insurance Schemes</a></li>
+           </ul>
+    </div>
+</section>
+
+<!--NFO Fund of the Month -->
+<section>
+    <h3 class="collapsible">NFO List</h3>
+    <div class="content">
+        <ul>
+            <li class="physical-kyc"><a href="**********">1.NFO</a></li>
+            
+           </ul>
+    </div>
+</section>
+
+
     <!-- Add Logout Button at the Bottom -->
     <div style="text-align: center; margin-top: 50px;">
         <button onclick="handleLogout()" style="padding: 10px 20px; background-color: red; color: white; border: none; cursor: pointer;">
@@ -115,13 +124,17 @@
         </button>
     </div>
     
-    <script>
-        // Display the username from localStorage
-        document.getElementById('usernameDisplay').innerText = localStorage.getItem('username');
+ <script>
+
+const collapsible = document.querySelector('.collapsible');
+const content = document.querySelector('.content');
+
+// Add a click event listener to toggle the content's visibility
+collapsible.addEventListener('click', () => {
+    content.classList.toggle('open'); // Toggle the 'open' class
+    collapsible.classList.toggle('open'); // Toggle the 'open' class on the collapsible header
+});
+
     </script>
 </body>
 </html>
-
-
-
-
